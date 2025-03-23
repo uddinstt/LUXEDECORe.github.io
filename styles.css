@@ -1,0 +1,217 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: gold;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Light Mode */
+.light-mode {
+    background: white;
+    color: black;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: gold;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('luxury-background.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h2, .hero p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.hero .btn {
+    margin-top: 20px;
+}
+
+/* Product Grid */
+.shop {
+    padding: 50px;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    background: rgba(255, 215, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* Animated Buttons */
+.btn {
+    background: gold;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.btn.glow:hover {
+    background: white;
+    color: black;
+    box-shadow: 0px 0px 10px gold;
+}
+
+/* About and Contact */
+.about, .contact {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Body Intro Animation */
+body {
+    opacity: 0;
+    transform: scale(1.1);
+    animation: fadeInScale 1s ease-out forwards;
+}
+
+/* Fade-in & Scale Animation */
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Navbar Slide Down Animation */
+.navbar {
+    transform: translateY(-100px);
+    animation: slideDown 1s ease-out 0.5s forwards;
+}
+
+@keyframes slideDown {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Hero Text Letter-by-Letter Animation */
+.hero h2 {
+    opacity: 0;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    animation: fadeInText 2s steps(20) 1s forwards;
+}
+
+@keyframes fadeInText {
+    from {
+        width: 0;
+        opacity: 1;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+/* Fixed Background Image */
+body {
+    background-image: url('dark-and-sophisticated-interior-ideas.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This makes the image stay fixed */
+    background-repeat: no-repeat;
+    color: white; /* Ensure text is readable */
+}
+
+/* Optional: Add an overlay for better readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay effect */
+    z-index: -1;
+}
+
+/* Other Styles to Enhance Visibility */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Section Styling for Content */
+section {
+    padding: 100px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+    backdrop-filter: blur(5px);
+}
