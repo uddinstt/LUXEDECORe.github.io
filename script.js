@@ -33,3 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add delay to body animation to create smooth intro effect
     document.body.style.animationDelay = "0.2s";
 });
+document.querySelector(".hamburger").addEventListener("click", function() {
+    document.querySelector(".nav-menu").classList.toggle("active");
+});
+

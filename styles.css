@@ -215,3 +215,73 @@ section {
     margin: 20px;
     backdrop-filter: blur(5px);
 }
+/* General Styles */
+body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Make images scale properly */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjust font sizes for mobile */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Smaller headings */
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    /* Fix product cards */
+    .product-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Mobile Navigation */
+    .nav-menu {
+        display: none; /* Hide default nav */
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 100;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Smooth Button Animations */
+    .button {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .button:hover {
+        transform: scale(1.05);
+    }
+}
+body {
+    background-image: url('your-image-path/A_luxurious_dark_marble_texture_with_elegant_gold_.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
